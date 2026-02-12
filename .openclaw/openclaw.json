@@ -1,0 +1,86 @@
+{
+  "messages": {
+    "ackReactionScope": "group-mentions"
+  },
+  "models": {
+    "providers": {
+      "ollama": {
+        "baseUrl": "https://ollama.com/v1",     
+        "apiKey": "98163416fbae491ea2cbeea14ded2dd8.Hq1zHJPXpGIzv0V66Jm-4s62",
+        "api": "openai-completions",           
+        "models": [
+          {
+            "id": "glm-5",          
+            "name": "glm-5"
+          }
+        ]
+      }
+    }
+  },
+  "agents": {
+    "defaults": {
+      "maxConcurrent": 4,
+      "subagents": {
+        "maxConcurrent": 8
+      },
+      "compaction": {
+        "mode": "safeguard"
+      },
+      "workspace": "/workspaces/firststep/",
+      "model": {
+        "primary": "ollama/glm-5"
+      }
+    }
+  },
+  "gateway": {
+    "mode": "local",
+    "auth": {
+      "mode": "token",
+      "token": "cf460daa1d6a154abbad25dc80e2b980b1c0ba46e21088e9"
+    },
+    "port": 18777,
+    "bind": "loopback",
+    "tailscale": {
+      "mode": "off",
+      "resetOnExit": false
+    },
+    "nodes": {
+      "denyCommands": [
+        "camera.snap",
+        "camera.clip",
+        "screen.record",
+        "calendar.add",
+        "contacts.add",
+        "reminders.add"
+      ]
+    }
+  },
+  "skills": {
+    "install": {
+      "nodeManager": "npm"
+    }
+  },
+  "hooks": {
+    "internal": {
+      "enabled": true,
+      "entries": {
+        "session-memory": {
+          "enabled": true
+        },
+        "boot-md": {
+          "enabled": true
+        }
+      }
+    }
+  },
+  "wizard": {
+    "lastRunAt": "2026-02-12T14:28:35.455Z",
+    "lastRunVersion": "2026.2.9",
+    "lastRunCommand": "onboard",
+    "lastRunMode": "local"
+  },
+  "meta": {
+    "lastTouchedVersion": "2026.2.9",
+    "lastTouchedAt": "2026-02-12T14:28:35.465Z"
+  }
+}

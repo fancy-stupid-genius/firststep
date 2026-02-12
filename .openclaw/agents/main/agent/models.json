@@ -1,0 +1,31 @@
+{
+  "providers": {
+    "github-copilot": {
+      "baseUrl": "https://api.individual.githubcopilot.com",
+      "models": []
+    },
+    "ollama": {
+      "baseUrl": "https://ollama.com/v1",
+      "apiKey": "98163416fbae491ea2cbeea14ded2dd8.Hq1zHJPXpGIzv0V66Jm-4s62",
+      "api": "openai-completions",
+      "models": [
+        {
+          "id": "glm-5",
+          "name": "glm-5",
+          "reasoning": false,
+          "input": [
+            "text"
+          ],
+          "cost": {
+            "input": 0,
+            "output": 0,
+            "cacheRead": 0,
+            "cacheWrite": 0
+          },
+          "contextWindow": 200000,
+          "maxTokens": 8192
+        }
+      ]
+    }
+  }
+}
